@@ -1,19 +1,22 @@
 <template>
   <div id="app">
-    <CalendarWeek/>
-    <CalendarEntry/>
+    <TraceFrame/>
+    <SubscribeTraceData/>
    </div>
 </template>
 
 <script>
-import CalendarWeek from './components/CalendarWeek.vue';
-import CalendarEntry from './components/CalendarEntry.vue';
+import TraceFrame from './components/TraceFrame';
+import SubscribeTraceData from './components/SubscribeTraceData'
 
 export default {
   name: 'App',
   components:{
-    CalendarWeek,
-    CalendarEntry
+    TraceFrame,
+    SubscribeTraceData
+  },
+  mounted(){
+    this.$mqtt.subscribe('VueMqtt/#')
   }
 }
 </script>
