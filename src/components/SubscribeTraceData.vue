@@ -4,6 +4,7 @@
 </template>
 
 <script>
+import { store } from "../store.js";
 export default {
     name: 'SubscribeTraceData',
     props:['state'],
@@ -17,13 +18,7 @@ export default {
     mqtt:{
         'VueMqtt/publish1' (data) {
             var obj = JSON.parse(data);
-            if (obj.trace){
-                this.state.plcTraceData = obj;
-            }
-            if (obj.traceConfig){
-                this.state.plcTraceDataTrigger = obj;
-            }
-
+            store.setAllPlcTraceData(obj);
         }
     }
 };
