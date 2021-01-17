@@ -15,5 +15,3 @@ export const plcTraceData={
       "buf": "000000030000"
     }
   }
-
-  export const plcTraceDataBufferAsArray={"array":[]}

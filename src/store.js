@@ -17,6 +17,14 @@ export const store = {
             case "b":   
                 var str = this.state.plcTraceData.trace.buf;
                 var res = str.split("");
+
+                for (var i = 0; i < res.length; i++){
+                    if(res[i]=='1'){
+                        res[i] = 1;
+                    } else {
+                        res[i] = 0;
+                    }
+                }
                 return res;
             default:
                 return [];
