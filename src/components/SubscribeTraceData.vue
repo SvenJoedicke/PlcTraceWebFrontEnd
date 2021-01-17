@@ -20,8 +20,11 @@ export default {
             var obj = JSON.parse(data);
             store.setAllPlcTraceData(obj);
 
-            var buffer = store.getBuffer();
+            var buffer = store.getRawBuffer();
             buffer;
+
+            var array = store.getBufferAsArray();
+            array;
         }
     }
 };

@@ -15,9 +15,11 @@ export const store = {
     getBufferAsArray(){
         switch (this.state.plcTraceData.trace.typ){
             case "b":   
-                return this.state.plcTraceData.trace.buf;
+                var str = this.state.plcTraceData.trace.buf;
+                var res = str.split("");
+                return res;
             default:
-                return this.state.plcTraceData.trace.buf;
+                return [];
         }
     },
     getPlcTraceData(){
