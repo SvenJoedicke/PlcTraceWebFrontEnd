@@ -17,8 +17,12 @@ export default {
     mqtt:{
         'VueMqtt/publish1' (data) {
             var obj = JSON.parse(data);
-            obj.buf;
-            this.state.plcTraceData.trace = obj;
+            if (obj.trace){
+                this.state.plcTraceData = obj;
+            }
+            if (obj.traceConfig){
+                this.state.plcTraceDataTrigger = obj;
+            }
 
         }
     }
