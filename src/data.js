@@ -12,6 +12,6 @@ export const plcTraceData={
       "obj": "DigitalInput",
       "name": "MyAwesomeDigitalInput",
       "typ": "b",
-      "buf": "000000000000"
+      "buf": "000000030000"
     }
   }

@@ -1,11 +1,12 @@
 <template>
-    <div class="sub" v-html="buff">        
+    <div>        
     </div>
 </template>
 
 <script>
 export default {
     name: 'SubscribeTraceData',
+    props:['state'],
     //components: { ComponentName },
     //directives: { DirectiveName },
     data() {
@@ -15,7 +16,10 @@ export default {
     },
     mqtt:{
         'VueMqtt/publish1' (data) {
-            this.buff = this.buff + data + '<br>'
+            var obj = JSON.parse(data);
+            obj.buf;
+            this.state.plcTraceData.trace = obj;
+
         }
     }
 };

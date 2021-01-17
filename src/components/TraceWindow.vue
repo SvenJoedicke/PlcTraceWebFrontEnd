@@ -1,14 +1,13 @@
 <template>
     <div>
-        <h1>
-            Hier soll das Fenster rein !!!
-        </h1>   
+        {{state.plcTraceData}}
     </div>
 </template>
 
 <script>
 export default {
     name: 'TraceWindow',
+    props:['state'],
     //components: { ComponentName },
     //directives: { DirectiveName },
     data() {
