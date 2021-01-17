@@ -19,6 +19,9 @@ export default {
         'VueMqtt/publish1' (data) {
             var obj = JSON.parse(data);
             store.setAllPlcTraceData(obj);
+
+            var buffer = store.getBuffer();
+            buffer;
         }
     }
 };

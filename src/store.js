@@ -9,8 +9,16 @@ export const store = {
     getTriggerConfiguration(){
         return this.state.plcTraceDataTrigger.traceConfig;
     },
-    getBuffer(){
-        return this.state.plcTraceData.trace.buf;
+    getRawBuffer(){
+       return this.state.plcTraceData.trace.buf;
+    },
+    getBufferAsArray(){
+        switch (this.state.plcTraceData.trace.typ){
+            case "b":   
+                return this.state.plcTraceData.trace.buf;
+            default:
+                return this.state.plcTraceData.trace.buf;
+        }
     },
     getPlcTraceData(){
         return this.state.plcTraceData;
