@@ -1,10 +1,26 @@
 import { plcTraceDataTrigger } from './data.js';
 import { plcTraceData } from './data.js';
+import { jsonify } from './data.js';
+import { dataFetch } from './data.js';
+import { schemaFetch } from './data.js';
 
 export const store = {
     state:{
         plcTraceDataTrigger,
-        plcTraceData
+        plcTraceData,
+        jsonify,
+        dataFetch,
+        schemaFetch
+    },
+    getDataFetch(){
+        var res = this.state.dataFetch;
+
+        return res;
+    },
+    getschemaFetch(){
+        var res = this.state.schemaFetch;
+
+        return res;
     },
     getTriggerConfiguration(){
         return this.state.plcTraceDataTrigger.traceConfig;

@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "fusioncharts": "^3.16.0",
     "vue": "^2.6.11",
+    "vue-fusioncharts": "^3.1.0",
     "vue-mqtt": "^2.0.3",
     "vuetrend": "^0.3.4"
   },
