@@ -1,6 +1,5 @@
 <template>
     <div>
-        {{state.plcTraceData}}
         <trend
         :data="getBufferAsArray"
         :gradientDirection="right"
@@ -20,28 +19,11 @@
 import { store } from "../store.js";
 export default {
     name: 'TraceWindow',
-    props:['state'],
     computed:{
         getBufferAsArray(){
              var res = store.getBufferAsArray();
              return res;
         }
-    },
-    //components: { ComponentName },
-    //directives: { DirectiveName },
-    data() {
-        return {
-            BufferAsArray : store.getBufferAsArray
-        };
-    },
-    mounted() {
-        
-    },
-    //methods: {
-    //    getBufferAsArray: function(){
-    //         var res = store.getBufferAsArray();
-    //         return res;
-    //    }
-    //},
+    }
 };
 </script>
