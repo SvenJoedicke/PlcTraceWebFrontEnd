@@ -1,6 +1,5 @@
 <template>
     <div>
-        <div> {{state.plcTraceData}} </div>
         <div>
             <trend
             :data="getBufferAsArray"
@@ -38,6 +37,7 @@ export default {
     props:['state'],
     computed:{
         getBufferAsArray(){
+             store.ActualizationBufferAsArray();
              var res = store.getBufferAsArray();
              return res;
         },

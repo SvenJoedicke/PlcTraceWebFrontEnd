@@ -31,6 +31,9 @@ export const store = {
        return this.state.plcTraceData.trace.buf;
     },
     getBufferAsArray(){
+        return this.state.plcTraceDataArray.arary;
+    },
+    ActualizationBufferAsArray(){
         var str = this.state.plcTraceData.trace.buf;
         var res = str.split("");
         switch (this.state.plcTraceData.trace.typ){
@@ -60,7 +63,9 @@ export const store = {
                 }
                 this.state.plcTraceDataArray.indexDataSet < this.state.plcTraceDataArray.MaxCountOfDataSet ? this.state.plcTraceDataArray.indexDataSet++ : this.state.plcTraceDataArray.indexDataSet = 0;
                 
-                return this.plcTraceDataArray.arary;
+
+                
+                return this.state.plcTraceDataArray.arary;
 
             default:
                 return [];

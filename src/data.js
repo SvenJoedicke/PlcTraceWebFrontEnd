@@ -1,7 +1,8 @@
 export const plcTraceDataArray={
   "MaxCountOfDataSet":5,
   "indexDataSet":0,
-  "arary":[]
+  "arary":[],
+  "arary2":[]
 };
 
 export const plcTraceDataTrigger={
