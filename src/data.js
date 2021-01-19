@@ -1,3 +1,9 @@
+export const plcTraceDataArray={
+  "MaxCountOfDataSet":5,
+  "indexDataSet":0,
+  "arary":[]
+};
+
 export const plcTraceDataTrigger={
     "traceConfig": {
       "trigObj": "",
