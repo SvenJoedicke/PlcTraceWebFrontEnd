@@ -1,5 +1,6 @@
 <template>
     <div>
+        <div> {{state.plcTraceData}} </div>
         <div>
             <trend
             :data="getBufferAsArray"
@@ -34,6 +35,7 @@ import FusionCharts from 'fusioncharts'
 
 export default {
     name: 'TraceWindow',
+    props:['state'],
     computed:{
         getBufferAsArray(){
              var res = store.getBufferAsArray();

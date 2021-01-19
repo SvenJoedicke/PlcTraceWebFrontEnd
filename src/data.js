@@ -1,18 +1,20 @@
 export const plcTraceDataTrigger={
     "traceConfig": {
-      "trigObj": "DigitalInput",
-      "trigName": "MyAwesomeDigitalInput",
-      "trigTyp": "RiseEdge",
-      "compVal": "00001111"
+      "trigObj": "",
+      "trigName": "",
+      "trigTyp": "",
+      "compVal": ""
     }
   }
 
 export const plcTraceData={
     "trace": {
-      "obj": "DigitalInput",
-      "name": "MyAwesomeDigitalInput",
-      "typ": "b",
-      "buf": "000000030000"
+      "t": "",
+      "dt": "",
+      "obj": "",
+      "name": "",
+      "typ": "",
+      "buf": ""
     }
   }
 
