@@ -17,8 +17,8 @@
         </div>
         <div>
         <fusioncharts
-            width=700
-            height=400
+            width=1600
+            height=800
             type='timeseries'
             dataFormat='json'
             :dataSource="dataSource"

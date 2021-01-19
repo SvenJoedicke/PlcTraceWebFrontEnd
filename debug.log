@@ -399,3 +399,7 @@
 [0118/212414.945:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fff5ba35978 of 48 bytes failed: Nur ein Teil der ReadProcessMemory- oder WriteProcessMemory-Anforderung wurde abgeschlossen. (0x12B)
 [0118/212414.946:ERROR:process_memory_win.cc(73)] ReadMemory at 0x7fff5ba3b4c0 of 64 bytes failed: Nur ein Teil der ReadProcessMemory- oder WriteProcessMemory-Anforderung wurde abgeschlossen. (0x12B)
 [0118/212414.947:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Es wurde versucht, auf einen Prozess zuzugreifen, der gerade beendet wurde. (0xc000010a)
+[0119/212757.706:ERROR:process_info.cc(329)] VirtualQueryEx: Zugriff verweigert (0x5)
+[0119/212757.708:ERROR:process_info.cc(556)] ReadMemoryInfo failed
+[0119/212757.708:ERROR:process_memory_win.cc(39)] Failed to initialize ProcessInfo.
+[0119/212757.708:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: Es wurde versucht, auf einen Prozess zuzugreifen, der gerade beendet wurde. (0xc000010a)
