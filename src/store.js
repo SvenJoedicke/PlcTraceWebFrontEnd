@@ -59,9 +59,10 @@ export const store = {
                                         +res[6 + faktor]
                                         +res[7 + faktor];
     
-                    this.state.plcTraceDataArray.arary[i + (this.state.plcTraceDataArray.indexDataSet * resFloatHexLength)] =this.parseHexStringAsFloat(floatHex);
+                    //this.state.plcTraceDataArray.arary[i + (this.state.plcTraceDataArray.indexDataSet * resFloatHexLength)] =this.parseHexStringAsFloat(floatHex);
+                    this.state.plcTraceDataArray.arary[i] =this.parseHexStringAsFloat(floatHex);
                 }
-                this.state.plcTraceDataArray.indexDataSet < this.state.plcTraceDataArray.MaxCountOfDataSet ? this.state.plcTraceDataArray.indexDataSet++ : this.state.plcTraceDataArray.indexDataSet = 0;
+                //this.state.plcTraceDataArray.indexDataSet < this.state.plcTraceDataArray.MaxCountOfDataSet ? this.state.plcTraceDataArray.indexDataSet++ : this.state.plcTraceDataArray.indexDataSet = 0;
                 
 
                 

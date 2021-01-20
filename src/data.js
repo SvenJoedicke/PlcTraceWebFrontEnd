@@ -1,5 +1,5 @@
 export const plcTraceDataArray={
-  "MaxCountOfDataSet":5,
+  "MaxCountOfDataSet":1,
   "indexDataSet":0,
   "arary":[],
   "arary2":[]
