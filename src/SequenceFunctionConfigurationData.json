@@ -1,0 +1,47 @@
+{
+  "dataType": {
+    "-name": "SequenceFunctionConfigurationData",
+    "baseType": {
+      "struct": {
+        "variable": [
+          {
+            "-name": "FunctionNumber",
+            "type": {}
+          },
+          {
+            "-name": "FunctionName",
+            "type": {
+              "derived": {
+                "-name": "RexAT.STRING_FOR_NAME"
+              }
+            }
+          },
+          {
+            "-name": "SequenceFunctionGenericOption",
+            "type": {
+              "derived": {
+                "-name": "SequenceFunctionGenericOptionEnum"
+              }
+            }
+          },
+          {
+            "-name": "ModuleFunctionArea",
+            "type": {
+              "derived": {
+                "-name": "ModuleFunctionAreaEnum"
+              }
+            }
+          },
+          {
+            "-name": "Options",
+            "type": {
+              "derived": {
+                "-name": "SequenceFunctionOptionBasicBits"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import { plcTraceData } from './data.js';
 import { jsonify } from './data.js';
 import { dataFetch } from './data.js';
 import { schemaFetch } from './data.js';
+import { TraceConfigurationData } from './data.js';   
 
 export const store = {
     state:{
@@ -12,7 +13,12 @@ export const store = {
         plcTraceData,
         jsonify,
         dataFetch,
-        schemaFetch
+        schemaFetch,
+        TraceConfigurationData
+    },
+    getTraceFunction(FunctionNumber){
+        var res = this.state.TraceConfigurationData.objects .objects.find(TraceObject => TraceObject.FunctionNumber.value === FunctionNumber);
+        return res;
     },
     getDataFetch(){
         var res = this.state.dataFetch;

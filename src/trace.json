@@ -1,0 +1,873 @@
+{
+  "project": {
+    "-xmlns": "http://www.plcopen.org/xml/tc6_0200",
+    "fileHeader": {
+      "-productName": "CODESYS",
+      "-productVersion": "CODESYS V3.5 SP16 Patch 3",
+      "-creationDateTime": "2021-01-29T21:00:43.8735339"
+    },
+    "contentHeader": {
+      "-name": "RexAT-SequencFunctionToolkits-InputOutputObjects",
+      "-version": "3.0.2.0",
+      "-modificationDateTime": "2021-01-21T16:20:04.6704123",
+      "-organization": "Rex Automatisierungstechnik GmbH",
+      "-author": "M.Eng. Sven Jödicke and Steven Schalm",
+      "Comment": "SFT means SequenceFunctionToolkits and this library contains classes of processfunctions, databasefunctions and controlfunctions",
+      "coordinateInfo": {
+        "fbd": {
+          "scaling": {
+            "-x": "1",
+            "-y": "1"
+          }
+        },
+        "ld": {
+          "scaling": {
+            "-x": "1",
+            "-y": "1"
+          }
+        },
+        "sfc": {
+          "scaling": {
+            "-x": "1",
+            "-y": "1"
+          }
+        }
+      },
+      "addData": {
+        "data": {
+          "-name": "http://www.3s-software.com/plcopenxml/projectinformation",
+          "-handleUnknown": "implementation",
+          "ProjectInformation": {
+            "property": [
+              {
+                "-name": "Author",
+                "-type": "string",
+                "#text": "M.Eng. Sven Jödicke and Steven Schalm"
+              },
+              {
+                "-name": "AutoResolveUnbound",
+                "-type": "boolean",
+                "#text": "true"
+              },
+              {
+                "-name": "Company",
+                "-type": "string",
+                "#text": "Rex Automatisierungstechnik GmbH"
+              },
+              {
+                "-name": "DefaultNamespace",
+                "-type": "string",
+                "#text": "RexAT_IO"
+              },
+              {
+                "-name": "Description",
+                "-type": "string",
+                "#text": "SFT means SequenceFunctionToolkits and this library contains classes of processfunctions, databasefunctions and controlfunctions"
+              },
+              {
+                "-name": "DocFormat",
+                "-type": "string",
+                "#text": "reStructuredText"
+              },
+              {
+                "-name": "installationTime",
+                "-type": "string",
+                "#text": "2021.01.21_16.19"
+              },
+              {
+                "-name": "IsEndUserLibrary",
+                "-type": "boolean",
+                "#text": "true"
+              },
+              {
+                "-name": "LibDocContent",
+                "-type": "string",
+                "#text": "DocsOnly"
+              },
+              {
+                "-name": "OnlineHelp",
+                "-type": "boolean",
+                "#text": "true"
+              },
+              {
+                "-name": "Placeholder",
+                "-type": "string",
+                "#text": "RexAT_IO"
+              },
+              {
+                "-name": "Project",
+                "-type": "string",
+                "#text": "RexAT_IO"
+              },
+              {
+                "-name": "Released",
+                "-type": "boolean",
+                "#text": "false"
+              },
+              {
+                "-name": "SourceLibrary",
+                "-type": "boolean",
+                "#text": "false"
+              },
+              {
+                "-name": "SVN",
+                "-type": "string",
+                "#text": "16950"
+              },
+              {
+                "-name": "SVNlast_change_author",
+                "-type": "string",
+                "#text": "SSchalm"
+              },
+              {
+                "-name": "SVNPath",
+                "-type": "string",
+                "#text": ".../HERKULES/TRUNK/RexAT_MIDDLEWARE/RexAT_SFT/RexAT_IO/"
+              },
+              {
+                "-name": "Title",
+                "-type": "string",
+                "#text": "RexAT-SequencFunctionToolkits-InputOutputObjects"
+              },
+              {
+                "-name": "Version",
+                "-type": "version",
+                "#text": "3.0.2.0"
+              },
+              {
+                "-name": "library-category-list",
+                "-type": "library-category-list",
+                "#text": "Target|Eckelmann AG"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "types": {
+      "dataTypes": {
+        "dataType": [
+          {
+            "-name": "AxisTraceValueEnum",
+            "baseType": {
+              "enum": {
+                "values": {
+                  "value": [
+                    {
+                      "-name": "Position",
+                      "-value": "0"
+                    },
+                    {
+                      "-name": "Velocity",
+                      "-value": "1"
+                    },
+                    {
+                      "-name": "Current",
+                      "-value": "2"
+                    }
+                  ]
+                }
+              }
+            },
+            "addData": {
+              "data": [
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/attributes",
+                  "-handleUnknown": "implementation",
+                  "Attributes": {
+                    "Attribute": [
+                      {
+                        "-Name": "qualified_only"
+                      },
+                      {
+                        "-Name": "strict"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                  "-handleUnknown": "discard",
+                  "ObjectId": "bc393909-de68-47f5-b165-9ad2529f79ae"
+                }
+              ]
+            }
+          },
+          {
+            "-name": "SafetyCircuitValueEnum",
+            "baseType": {
+              "enum": {
+                "values": {
+                  "value": [
+                    {
+                      "-name": "EmergencyDetected",
+                      "-value": "0"
+                    },
+                    {
+                      "-name": "EmergencyDetectedDelayed",
+                      "-value": "1"
+                    },
+                    {
+                      "-name": "SafetyDoorIsClosed",
+                      "-value": "2"
+                    },
+                    {
+                      "-name": "ServiceModeDetected",
+                      "-value": "3"
+                    },
+                    {
+                      "-name": "SafetyVelocityExceeded",
+                      "-value": "4"
+                    }
+                  ]
+                }
+              }
+            },
+            "addData": {
+              "data": [
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/attributes",
+                  "-handleUnknown": "implementation",
+                  "Attributes": {
+                    "Attribute": [
+                      {
+                        "-Name": "qualified_only"
+                      },
+                      {
+                        "-Name": "strict"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                  "-handleUnknown": "discard",
+                  "ObjectId": "4aca3bfd-741e-4596-87d8-330920a18375"
+                }
+              ]
+            }
+          },
+          {
+            "-name": "TraceConfigurationData",
+            "baseType": {
+              "struct": {
+                "variable": [
+                  {
+                    "-name": "TraceTriggerMode",
+                    "type": {
+                      "derived": {
+                        "-name": "TraceTriggerModeEnum"
+                      }
+                    },
+                    "initialValue": {
+                      "simpleValue": {
+                        "-value": "TraceTriggerModeEnum.ContinousMode"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "FunctionNumberOfTrigger",
+                    "type": {}
+                  },
+                  {
+                    "-name": "FunctionNoOfSequenceFunctionToTrace",
+                    "type": {}
+                  },
+                  {
+                    "-name": "TriggerComparingBoolValueOption",
+                    "type": {
+                      "derived": {
+                        "-name": "TriggerComparingBoolValueOptionEnum"
+                      }
+                    },
+                    "initialValue": {
+                      "simpleValue": {
+                        "-value": "TriggerComparingBoolValueOptionEnum.HighValue"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TriggerComparingFloatValueOption",
+                    "type": {
+                      "derived": {
+                        "-name": "TriggerComparingFloatValueOptionEnum"
+                      }
+                    },
+                    "initialValue": {
+                      "simpleValue": {
+                        "-value": "TriggerComparingFloatValueOptionEnum.GreaterThan"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TriggerValueNormally",
+                    "type": {}
+                  },
+                  {
+                    "-name": "TriggerValueUpperLimit",
+                    "type": {}
+                  },
+                  {
+                    "-name": "AxisTraceValueForTrace",
+                    "type": {
+                      "derived": {
+                        "-name": "AxisTraceValueEnum"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SafetyCircuitValueForTrace",
+                    "type": {
+                      "derived": {
+                        "-name": "SafetyCircuitValueEnum"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "AxisTraceValueForTrigger",
+                    "type": {
+                      "derived": {
+                        "-name": "AxisTraceValueEnum"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SafetyCircuitValueForTrigger",
+                    "type": {
+                      "derived": {
+                        "-name": "SafetyCircuitValueEnum"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SizeOfBufferInDword",
+                    "type": {}
+                  },
+                  {
+                    "-name": "MqttTopic",
+                    "type": {}
+                  },
+                  {
+                    "-name": "TimeOutPublisher",
+                    "type": {}
+                  }
+                ]
+              }
+            },
+            "addData": {
+              "data": {
+                "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                "-handleUnknown": "discard",
+                "ObjectId": "aa089c56-0def-43fd-a16e-53169b49829e"
+              }
+            }
+          },
+          {
+            "-name": "TraceStatusBitsData",
+            "baseType": {
+              "struct": {
+                "variable": [
+                  {
+                    "-name": "SendRequestTriggerConfiguration",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SetTimeToBuffer",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "Bit10",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "Bit1",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "Bit12",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "Bit13",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "Bit14",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "Bit15",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SecondBufferChannelActive",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SendRequest",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    },
+                    "initialValue": {
+                      "simpleValue": {
+                        "-value": "FALSE"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "SendResponse",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    },
+                    "initialValue": {
+                      "simpleValue": {
+                        "-value": "TRUE"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TraceActive",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    },
+                    "initialValue": {
+                      "simpleValue": {
+                        "-value": "FALSE"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "BooleanTriggerActive",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "RealTriggerActive",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TraceValueForTriggerRisedEdge",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TraceValueForTriggerFalledEdge",
+                    "type": {
+                      "derived": {
+                        "-name": "BIT"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "addData": {
+              "data": {
+                "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                "-handleUnknown": "discard",
+                "ObjectId": "8f22be1b-25d0-4d5c-8349-2fd23d15ac6f"
+              }
+            }
+          },
+          {
+            "-name": "TraceStatusData",
+            "baseType": {
+              "struct": {
+                "variable": [
+                  {
+                    "-name": "TraceStatusBitsMask",
+                    "type": {
+                      "derived": {
+                        "-name": "TraceStatusBitsMaskUnion"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TimeStamp",
+                    "type": {
+                      "derived": {
+                        "-name": "RexAT.SysTimeRtc.SYSTIME"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "PlcCycleTime",
+                    "type": {}
+                  },
+                  {
+                    "-name": "ActualIndex",
+                    "type": {}
+                  },
+                  {
+                    "-name": "RealBufferSize",
+                    "type": {}
+                  },
+                  {
+                    "-name": "SizeOfBufferInByte",
+                    "type": {}
+                  },
+                  {
+                    "-name": "TypeIdOfSequenceFunctionToTrace",
+                    "type": {
+                      "derived": {
+                        "-name": "RexAT.TypeIdEnum"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TraceValueToTrace",
+                    "type": {
+                      "derived": {
+                        "-name": "RexAT.RexAT_TYPES.AllTypesUnion32Bit"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TypeIdOfSequenceFunctionForTrigger",
+                    "type": {
+                      "derived": {
+                        "-name": "RexAT.TypeIdEnum"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "TraceValueForTrigger",
+                    "type": {
+                      "derived": {
+                        "-name": "RexAT.RexAT_TYPES.AllTypesUnion32Bit"
+                      }
+                    }
+                  },
+                  {
+                    "-name": "ActualTime",
+                    "type": {}
+                  },
+                  {
+                    "-name": "SinusWave",
+                    "type": {}
+                  }
+                ]
+              }
+            },
+            "addData": {
+              "data": {
+                "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                "-handleUnknown": "discard",
+                "ObjectId": "67a85a09-89a8-44b9-9998-78d96298380b"
+              }
+            }
+          },
+          {
+            "-name": "TraceTriggerModeEnum",
+            "baseType": {
+              "enum": {
+                "values": {
+                  "value": [
+                    {
+                      "-name": "noTriggerMode",
+                      "-value": "0"
+                    },
+                    {
+                      "-name": "ContinousMode",
+                      "-value": "1"
+                    },
+                    {
+                      "-name": "TriggeredMode",
+                      "-value": "2"
+                    }
+                  ]
+                }
+              }
+            },
+            "addData": {
+              "data": [
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/attributes",
+                  "-handleUnknown": "implementation",
+                  "Attributes": {
+                    "Attribute": [
+                      {
+                        "-Name": "qualified_only"
+                      },
+                      {
+                        "-Name": "strict"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                  "-handleUnknown": "discard",
+                  "ObjectId": "22c026c9-55c4-4df8-9d1d-b6f93709e0fc"
+                }
+              ]
+            }
+          },
+          {
+            "-name": "TriggerComparingBoolValueOptionEnum",
+            "baseType": {
+              "enum": {
+                "values": {
+                  "value": [
+                    {
+                      "-name": "LowValue",
+                      "-value": "0"
+                    },
+                    {
+                      "-name": "HighValue",
+                      "-value": "1"
+                    },
+                    {
+                      "-name": "RisedEdge",
+                      "-value": "2"
+                    },
+                    {
+                      "-name": "RisedEdgeOnce",
+                      "-value": "3"
+                    },
+                    {
+                      "-name": "FalledEdge",
+                      "-value": "4"
+                    },
+                    {
+                      "-name": "FalledEdgeOnce",
+                      "-value": "5"
+                    }
+                  ]
+                }
+              }
+            },
+            "addData": {
+              "data": [
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/attributes",
+                  "-handleUnknown": "implementation",
+                  "Attributes": {
+                    "Attribute": [
+                      {
+                        "-Name": "qualified_only"
+                      },
+                      {
+                        "-Name": "strict"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                  "-handleUnknown": "discard",
+                  "ObjectId": "4a8be1b3-091b-4fc2-80fa-006029a75127"
+                }
+              ]
+            }
+          },
+          {
+            "-name": "TriggerComparingFloatValueOptionEnum",
+            "baseType": {
+              "enum": {
+                "values": {
+                  "value": [
+                    {
+                      "-name": "GreaterThan",
+                      "-value": "0"
+                    },
+                    {
+                      "-name": "GreaterThanOnce",
+                      "-value": "1"
+                    },
+                    {
+                      "-name": "LessThan",
+                      "-value": "2"
+                    },
+                    {
+                      "-name": "LessThanOnce",
+                      "-value": "3"
+                    },
+                    {
+                      "-name": "WithinArea",
+                      "-value": "4"
+                    },
+                    {
+                      "-name": "OutsideArea",
+                      "-value": "5"
+                    }
+                  ]
+                }
+              }
+            },
+            "addData": {
+              "data": [
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/attributes",
+                  "-handleUnknown": "implementation",
+                  "Attributes": {
+                    "Attribute": [
+                      {
+                        "-Name": "qualified_only"
+                      },
+                      {
+                        "-Name": "strict"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                  "-handleUnknown": "discard",
+                  "ObjectId": "cc1d07bb-1e75-4a1c-8d56-7f2d728c693c"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "instances": {},
+    "addData": {
+      "data": [
+        {
+          "-name": "http://www.3s-software.com/plcopenxml/union",
+          "-handleUnknown": "implementation",
+          "union": {
+            "-name": "TraceStatusBitsMaskUnion",
+            "variable": [
+              {
+                "-name": "Mask",
+                "type": {}
+              },
+              {
+                "-name": "Bits",
+                "type": {
+                  "derived": {
+                    "-name": "TraceStatusBitsData"
+                  }
+                }
+              }
+            ],
+            "addData": {
+              "data": {
+                "-name": "http://www.3s-software.com/plcopenxml/objectid",
+                "-handleUnknown": "discard",
+                "ObjectId": "1220bcbd-f7f2-4cf2-a70f-3b1d5b3df856"
+              }
+            }
+          }
+        },
+        {
+          "-name": "http://www.3s-software.com/plcopenxml/projectstructure",
+          "-handleUnknown": "discard",
+          "ProjectStructure": {
+            "Folder": {
+              "-Name": "Sources",
+              "Documentation": {
+                "xhtml": {
+                  "-xmlns": "http://www.w3.org/1999/xhtml",
+                  "#text": "Sources includes specific sequence functions, communicaton objects and databases spltted in database functions, process device functions, sequence control functions."
+                }
+              },
+              "Folder": {
+                "-Name": "ProcessDeviceFunctions",
+                "Folder": {
+                  "-Name": "Trace",
+                  "Folder": {
+                    "-Name": "Database",
+                    "Object": [
+                      {
+                        "-Name": "AxisTraceValueEnum",
+                        "-ObjectId": "bc393909-de68-47f5-b165-9ad2529f79ae"
+                      },
+                      {
+                        "-Name": "TraceStatusBitsData",
+                        "-ObjectId": "8f22be1b-25d0-4d5c-8349-2fd23d15ac6f"
+                      },
+                      {
+                        "-Name": "TraceConfigurationData",
+                        "-ObjectId": "aa089c56-0def-43fd-a16e-53169b49829e"
+                      },
+                      {
+                        "-Name": "SafetyCircuitValueEnum",
+                        "-ObjectId": "4aca3bfd-741e-4596-87d8-330920a18375"
+                      },
+                      {
+                        "-Name": "TraceStatusBitsMaskUnion",
+                        "-ObjectId": "1220bcbd-f7f2-4cf2-a70f-3b1d5b3df856"
+                      },
+                      {
+                        "-Name": "TraceStatusData",
+                        "-ObjectId": "67a85a09-89a8-44b9-9998-78d96298380b"
+                      },
+                      {
+                        "-Name": "TraceTriggerModeEnum",
+                        "-ObjectId": "22c026c9-55c4-4df8-9d1d-b6f93709e0fc"
+                      },
+                      {
+                        "-Name": "TriggerComparingBoolValueOptionEnum",
+                        "-ObjectId": "4a8be1b3-091b-4fc2-80fa-006029a75127"
+                      },
+                      {
+                        "-Name": "TriggerComparingFloatValueOptionEnum",
+                        "-ObjectId": "cc1d07bb-1e75-4a1c-8d56-7f2d728c693c"
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

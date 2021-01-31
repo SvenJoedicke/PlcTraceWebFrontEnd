@@ -1,3 +1,31 @@
+
+export const TraceConfigurationData = {
+  Count:0,
+  objects:
+  [{  
+  SequenceFunctionConfigurationData: {
+    FunctionNumber: {
+      type: "UDINT",
+      value: 0
+    },
+    FunctionName: {
+      type: "string40",
+      value: ""
+    },
+    options: {
+      type: "mask",
+      value: {
+        Bit0: true,
+        Bit1: false,
+        Bit2: false
+      }
+    }
+  }
+}]
+};
+
+
+
 export const plcTraceDataArray={
   "MaxCountOfDataSet":1,
   "indexDataSet":0,
@@ -24,6 +52,8 @@ export const plcTraceData={
       "buf": ""
     }
   }
+
+
 
 export const myTraceData={
   "dataSource": {
