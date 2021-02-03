@@ -17,7 +17,7 @@ export const store = {
         TraceConfigurationData
     },
     getTraceFunction(FunctionNumber){
-        var res = this.state.TraceConfigurationData.objects .objects.find(TraceObject => TraceObject.FunctionNumber.value === FunctionNumber);
+        const res = this.state.TraceConfigurationData.objects.find(TraceObject => TraceObject.SequenceFunctionConfigurationData.FunctionNumber.value == FunctionNumber);
         return res;
     },
     getDataFetch(){

@@ -6,7 +6,7 @@ export const TraceConfigurationData = {
   SequenceFunctionConfigurationData: {
     FunctionNumber: {
       type: "UDINT",
-      value: 0
+      value: 1234
     },
     FunctionName: {
       type: "string40",

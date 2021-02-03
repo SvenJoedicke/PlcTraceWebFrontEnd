@@ -59,8 +59,8 @@ export default {
             //if(FunctionNumber === 0) return this.error = true;
             
             var res = store.getTraceFunction(FunctionNumber);
-            this.FunctionNumber = res.FunctionNumber.value;
-            this.Name = res.FunctionName.value;
+            this.FunctionNumber = res.SequenceFunctionConfigurationData.FunctionNumber.value;
+            this.Name = res.SequenceFunctionConfigurationData.FunctionName.value;
             this.error = false;
             
         }    
