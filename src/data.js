@@ -1,6 +1,7 @@
 
 export const TraceConfigurationData = {
   Count:0,
+  typeId:123,
   objects:
   [{  
   SequenceFunctionConfigurationData: {
@@ -9,7 +10,8 @@ export const TraceConfigurationData = {
       value: 1234
     },
     FunctionName: {
-      type: "string40",
+      type: "string",
+      sizeOf: 40,
       value: ""
     },
     options: {
