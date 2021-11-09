@@ -87,7 +87,7 @@ export default {
                 this.Name = SequenceFunction.object.SequenceFunctionConfigurationData.FunctionName.value;
             }
             var SequenceFunctionAsString    = JSON.stringify(SequenceFunction);
-            const buffer                    = new ArrayBuffer(16);
+            const buffer                    = new ArrayBuffer(1000);
             const bufferView                = new DataView(buffer);
             var index                        = 0;
             if(SequenceFunction !== undefined){
@@ -109,10 +109,10 @@ export default {
             bufferView.setUint32(index,1); 
  
             var bufferAsByteArray = new Uint8Array(buffer); 
-            var bufferAsString = String.fromCharCode.apply(this, bufferAsByteArray);
+            //var bufferAsString = String.fromCharCode.apply(this, bufferAsByteArray);
 
             this.$mqtt.publish('RexAT/Telegram/ToolkitConfigurationAPI', SequenceFunctionAsString);
-            this.$mqtt.publish('RexAT/Telegram/ToolkitConfigurationAPI/bin', bufferAsString);
+            this.$mqtt.publish('RexAT/Telegram/ToolkitConfigurationAPI/bin', bufferAsByteArray);
 
 
             this.error = false;
